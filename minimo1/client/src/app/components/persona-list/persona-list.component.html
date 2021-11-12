@@ -1,0 +1,6 @@
+<div class="list-group">
+  <a class="list-group-item list-group-item-action" *ngFor="let persona of personas"
+  (click) = "getPersona(persona._id)">
+    {{persona.name}}
+  </a>
+</div>

@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const personaController_1 = require("../controllers/personaController");
+const seguimientoController_1 = require("../controllers/seguimientoController");
+const router = (0, express_1.Router)();
+router.get('/api/personas', personaController_1.personaController.getAllHandler);
+router.post('/api/seguimientos', seguimientoController_1.seguimientoController.createOneHandler);
+router.get('/api/persona/:id', personaController_1.personaController.getOneHandler);
+router.get('/api/seguimiento/:id', seguimientoController_1.seguimientoController.getOneHandler);
+router.put('/api/persona/:id', personaController_1.personaController.updateOneHandler);
+exports.default = router;
